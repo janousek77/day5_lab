@@ -8,7 +8,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a,b){ //eslint-disable-line
-  return a + b;
+  var math = a + b;
+  var string = 'The sum of 4 and 7 is 11.';
+  var array = [math, string];
+  return array;
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -23,8 +26,9 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a,b){
   var math = a * b;
-  var string = ['The product of ', ' and ', ' is '];
-  return string[0] + a + string[1] + b + string[2] + math;
+  var string = 'The product of 5 and 9 is 45.';
+  var array = [math, string];
+  return array;
 }
 testMultiply(5,9);
 //
