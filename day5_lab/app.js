@@ -9,8 +9,8 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a,b){ //eslint-disable-line
   var math = a + b;
-  var string = 'The sum of 4 and 7 is 11.';
-  var array = [math, string];
+  var words = 'The sum of ' + a + ' and ' + b + ' is ' + math + '.';
+  var array = [math, words];
   return array;
 }
 
@@ -26,8 +26,8 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a,b){
   var math = a * b;
-  var string = 'The product of 5 and 9 is 45.';
-  var array = [math, string];
+  var words = 'The product of ' + a + ' and ' + b + ' is ' + math + '.';
+  var array = [math, words];
   return array;
 }
 testMultiply(5,9);
@@ -44,11 +44,11 @@ testMultiply(5,9);
 //
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-  var addition = a + b + c;
   var multiplication = a * b * c;
-  var addString = '4 and 7 and 5 sum to 16.';
-  var mulString = 'The product of 4 and 7 and 5 is 140.';
-  var array = [addition, multiplication, addString, mulString ];
+  var addition = a + b + c;
+  var addWords = a + ' and ' + b + ' and ' + c + ' sum to ' + addition + '.';
+  var mulWords = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiplication + '.';
+  var array = [addition, multiplication, addWords, mulWords ];
   return array;
 }
 //
@@ -68,10 +68,9 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
-  var testArray = [2,3,4];
   var math = testArray[0] + testArray[1] + testArray[2];
-  var string = '2,3,4 was passed in as an array of numbers, and 9 is their sum.';
-  var array = [math, string];
+  var words = testArray + ' was passed in as an array of numbers, and ' + math + ' is their sum.';
+  var array = [math, words];
   return array;
 }
 
@@ -90,10 +89,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
-
+  var firstSet = multiply(testArray[0], testArray[1]);
+  var secondSet = multiply(firstSet[0], testArray[2]);
+  var words = 'The numbers ' + testArray + ' have a product of ' + secondSet[0] + '.';
+  return [secondSet[0], words];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+testMultiplyArray(2,3,4);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
